@@ -1,8 +1,8 @@
 export const AppConfig = {
-  site_name: 'Astro boilerplate',
-  title: 'Astro boilerplate',
-  description: 'Boilerplate built with Astro using React and Tailwind CSS',
-  author: 'Emma',
-  locale_region: 'en-us',
-  locale: 'en',
+  site_name: 'Lbyte.pe',
+  title: 'Lbyte Perú',
+  description: 'Software Company in Perú',
+  author: 'Ruben Paz Chuspe',
+  locale_region: 'es-pe',
+  locale: 'es',
 };
