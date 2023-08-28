@@ -15,3 +15,5 @@ tilt_modules/
 src/i18n/ast/
 yarn-error.log
 .tool-versions
+.DS_Store
+.DS_Store
