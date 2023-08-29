@@ -112,8 +112,7 @@ All commands are run from the root of the project, from a terminal:
 
 ### Contributions
 
-Everyone is welcome to contribute to this project.
-Feel free to open an issue if you have question or found a bug.
+This is a private project 
 
 ### Additional Checks
 
