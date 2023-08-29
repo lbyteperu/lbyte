@@ -1,17 +1,17 @@
 ---
 layout: '@/templates/BasePost.astro'
-title: Programación Orientada a Objetos OOP
+title: Programación Orientada a Objetos OOP(Object Oriented Programming)
 description: La programación orientada a objetos es un paradigma de desarrollo de software
-pubDate: 2020-02-06T00:00:00Z
+pubDate: 2023-29-08T00:00:00Z
 imgSrc: '/assets/images/image-post.jpeg'
 imgAlt: 'Image post'
 ---
 
-This is a paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
+La programación orientada a objetos es un paradigma de desarrollo de software popular y aceptada por desarrolladores de todo el mundo y ha estado presente desde el año 1960. 
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
+La programación orientada a objetos (OOP), es uno de los mas populares paradigmas de programación. Se origina de la teoria de los conceptos, and modela las interacciones humanas con los fenomenos del mundo real(Normark, 2013) 
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
+Los cuatro principales conceptos que lo conforman son: abtraccion, encapsulacion, herencia y polimorfismo
 
 ## Headings
 
