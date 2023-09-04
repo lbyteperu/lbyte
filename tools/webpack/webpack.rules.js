@@ -18,7 +18,13 @@ module.exports = [
     test: /\.css$/,
     use: [
       { loader: inDev() ? 'style-loader' : MiniCssExtractPlugin.loader },
-      { loader: 'css-loader' },
+      {
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1,
+          modules: true,
+        },
+      },
     ],
   },
   {
