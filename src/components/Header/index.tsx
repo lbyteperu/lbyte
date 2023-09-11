@@ -1,7 +1,6 @@
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   IconButton,
   Drawer,
@@ -13,6 +12,7 @@ import React, { useState, useEffect } from 'react';
 import { Link as RouterLink, MemoryRouter } from 'react-router-dom';
 import { StaticRouter } from 'react-router-dom/server';
 import { LbyteIcon } from '@lbyteperu/lbyte-ui-library';
+import SwitchMode from '../SwitchMode';
 import styles from './index.css';
 
 function Router(props: { children?: React.ReactNode }) {
@@ -24,26 +24,11 @@ function Router(props: { children?: React.ReactNode }) {
   return <MemoryRouter>{children}</MemoryRouter>;
 }
 
-const headersData = [
-  {
-    label: 'Listings',
-    href: '/listings',
-  },
-  {
-    label: 'Mentors',
-    href: '/mentors',
-  },
-  {
-    label: 'My Account',
-    href: '/account',
-  },
-  {
-    label: 'Log Out',
-    href: '/logout',
-  },
-];
+export declare interface Props {
+  menuData: Array<Menu>,
+}
 
-export default function Header() {
+export default function Header({ menuData }: Props) {
   const [state, setState] = useState({
     mobileView: false,
     drawerOpen: false,
@@ -87,35 +72,33 @@ export default function Header() {
     return (
       <Toolbar>
         <IconButton
-          {...{
-            edge: 'start',
-            color: 'inherit',
-            'aria-label': 'menu',
-            'aria-haspopup': 'true',
-            onClick: handleDrawerOpen,
-          }}
+          edge="start"
+          color="inherit"
+          aria-label='menu'
+          aria-haspopup={true}
+          className={styles.iconButton}
+          onClick={handleDrawerOpen}
         >
           <MenuIcon />
         </IconButton>
 
         <Drawer
-          {...{
-            anchor: 'left',
-            open: drawerOpen,
-            onClose: handleDrawerClose,
-          }}
+          anchor='left'
+          open={drawerOpen}
+          onClose={handleDrawerClose}
         >
           <div className={styles.drawerContainer}>{getDrawerChoices()}</div>
         </Drawer>
         <div>
           {femmecubatorLogo}
         </div>
+        <SwitchMode />
       </Toolbar>
     );
   };
 
   const getDrawerChoices = () => {
-    return headersData.map(({ label, href }) => {
+    return menuData.map(({ label, href }) => {
       return (
         <Link key={label}>
           <MenuItem>{label}</MenuItem>
@@ -127,7 +110,7 @@ export default function Header() {
   const femmecubatorLogo = <LbyteIcon size='x-large' />;
 
   const getMenuButtons = () => {
-    return headersData.map(({ label, href }) => {
+    return menuData.map(({ label, href }) => {
       return (
         <Button key={label} component={RouterLink} to={href} color='inherit'>
           {label}

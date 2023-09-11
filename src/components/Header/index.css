@@ -26,3 +26,7 @@
 .drawerContainer {
   padding: 20px 30px;
 }
+
+.iconButton {
+  min-width: 3rem;
+}
