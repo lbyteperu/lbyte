@@ -120,10 +120,8 @@ export default function Header({ menuData }: Props) {
   };
 
   return (
-    <header>
-      <AppBar className={styles.header}>
-        {mobileView ? displayMobile() : displayDesktop()}
-      </AppBar>
-    </header>
+    <AppBar className={styles.header}>
+      {mobileView ? displayMobile() : displayDesktop()}
+    </AppBar>
   );
 }

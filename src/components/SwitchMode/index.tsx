@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { Switch, FormGroup, FormControlLabel } from "@mui/material"
 
 export default function SwitchMode() {
-    const [darkTheme, setDarkTheme] = useState(true)
+    const [darkTheme, setDarkTheme] = useState(false)
 
     useEffect(() => {
         const useDarkTheme = parseInt(localStorage.getItem('dark-mode'))
-        console.log(useDarkTheme)
         if (isNaN(useDarkTheme)) {
             setDarkTheme(true)
         } else if (useDarkTheme == 1) {
@@ -33,7 +32,7 @@ export default function SwitchMode() {
     return (
         <FormGroup>
             <FormControlLabel
-                control={<Switch color="primary" onClick={toggleTheme} />}
+                control={<Switch color="secondary" onClick={toggleTheme} />}
                 label='Modo Día' />
         </FormGroup>
     )
