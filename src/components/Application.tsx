@@ -28,7 +28,7 @@ const menuData = [
     href: '/home'
   },
   {
-    label: 'Blog',
+    label: 'Blogggg',
     href: '/blog',
   },
   {
