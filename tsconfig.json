@@ -1,22 +1,12 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "allowJs": true,
-    "target": "ES6",
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
+    "outDir": "./dist/",
     "noImplicitAny": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "outDir": "dist",
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "paths": {
-      "*": ["node_modules/*"],
-      "@assets/*": ["./assets/*"],
-      "@src/*": ["./src/*"]
-    }
-  },
-  "include": ["src/**/*", "tools/**/*"]
+    "allowSyntheticDefaultImports": true,
+  }
 }
